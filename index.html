@@ -1,125 +1,102 @@
 <!doctype html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ZIGA Production — 9 พ.ค. 2569</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZIGA Production — 11 พ.ค. 2569</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F5F4F0;--card:#fff;--ink:#1A1916;--ink2:#4B5563;--line:#E5E7EB;
   --gd:#065F46;--gm:#059669;--gl:#34D399;--gbg:#ECFDF5;
   --red:#DC2626;--rbg:#FEF2F2;--orn:#F97316;--obg:#FFF7ED;
-  --blue:#3D7FFF;--bbg:#EFF6FF;--grey:#6B7280;--gbg2:#F3F4F6}
+  --blue:#3D7FFF;--bbg:#EFF6FF;--grey:#6B7280;--gbg2:#F3F4F6;--purp:#7C3AED;--pbg:#F3E8FF}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans Thai','Inter',sans-serif;font-size:13.5px;line-height:1.55}
-.wrap{max-width:1380px;margin:0 auto;padding:20px 16px}
-
-/* HEADER */
+.wrap{max-width:1400px;margin:0 auto;padding:20px 16px}
 .hdr{border-bottom:3px solid var(--gd);padding-bottom:14px;margin-bottom:22px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px}
-.hdr-left h1{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:var(--gd);letter-spacing:-0.02em}
-.hdr-left .sub{color:var(--gm);font-size:12px;margin-top:3px;font-style:italic}
-.hdr-right{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink2);text-align:right}
+.hdr h1{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:var(--gd);letter-spacing:-.02em}
+.hdr .sub{color:var(--gm);font-size:12px;margin-top:3px;font-style:italic}
+.hdr-r{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink2);text-align:right}
 
-/* EXEC SUMMARY BOX */
-.exec{background:linear-gradient(135deg,#ECFDF5 0%,#EFF6FF 100%);border:1px solid var(--gd);border-radius:14px;padding:18px 22px;margin-bottom:20px}
-.exec h2{color:var(--gd);font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-.exec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.exec-item{background:#fff;border-radius:10px;padding:12px 16px;border-left:4px solid var(--gd)}
-.exec-item.danger{border-left-color:var(--red);background:#FFF5F5}
-.exec-item.warn{border-left-color:var(--orn);background:var(--obg)}
-.exec-item.ok{border-left-color:var(--gm)}
-.exec-item.blue{border-left-color:var(--blue);background:var(--bbg)}
-.exec-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--grey)}
-.exec-val{font-family:'Space Grotesk',monospace;font-size:28px;font-weight:700;color:var(--ink);line-height:1.1;margin-top:2px}
-.exec-sub{font-size:11px;color:var(--ink2);margin-top:4px}
+.exec{background:linear-gradient(135deg,#ECFDF5,#EFF6FF);border:1px solid var(--gd);border-radius:14px;padding:18px 22px;margin-bottom:20px}
+.exec h2{color:var(--gd);font-size:14px;font-weight:700;margin-bottom:12px}
+.exec-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.ecard{background:#fff;border-radius:10px;padding:12px 16px;border-left:4px solid var(--gd)}
+.ecard.r{border-left-color:var(--red);background:var(--rbg)}
+.ecard.o{border-left-color:var(--orn);background:var(--obg)}
+.ecard.b{border-left-color:var(--blue);background:var(--bbg)}
+.ecard.p{border-left-color:var(--purp);background:var(--pbg)}
+.ecard .el{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--grey)}
+.ecard .ev{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--ink);line-height:1.1;margin-top:2px}
+.ecard .es{font-size:11px;color:var(--ink2);margin-top:4px}
 
-/* KPI GRID */
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:20px}
-.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;border-top:4px solid var(--blue)}
-.kpi.g{border-top-color:var(--gm)} .kpi.r{border-top-color:var(--red)} .kpi.o{border-top-color:var(--orn)} .kpi.gd{border-top-color:var(--gd)}
-.kpi .lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--grey)}
-.kpi .val{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--ink);margin-top:3px;line-height:1.1}
-.kpi .s{font-size:11px;color:var(--ink2);margin-top:5px}
+.miss-sec{background:#fff;border:2px solid var(--purp);border-radius:14px;padding:18px;margin-bottom:16px}
+.miss-sec h2{color:var(--purp);font-size:15px;font-weight:700;margin-bottom:14px}
+.miss-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.miss-card{background:var(--pbg);border:1px solid #DDD6FE;border-radius:10px;padding:14px}
+.miss-card .mn{font-weight:700;font-size:13px;color:var(--purp)}
+.miss-card .mj{font-size:12px;color:var(--ink2);margin-top:5px;line-height:1.6}
+.miss-card .tag{display:inline-block;background:#EDE9FE;color:var(--purp);font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;margin-top:6px}
 
-/* SECTION */
 .sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
 .sec h2{font-size:15px;font-weight:700;color:var(--gd);margin-bottom:14px;display:flex;align-items:center;gap:8px}
 .badge{font-family:'IBM Plex Mono',monospace;font-size:11px;background:var(--gbg);color:var(--gd);padding:2px 8px;border-radius:6px;font-weight:600}
-
-/* TABLE */
 .scroll{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:12px}
-thead th{background:var(--gd);color:#fff;text-align:center;padding:9px 7px;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:0.04em;border:1px solid #064E3B;white-space:nowrap}
-thead th.left{text-align:left}
+thead th{background:var(--gd);color:#fff;text-align:center;padding:9px 7px;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;border:1px solid #064E3B;white-space:nowrap}
+thead th.l{text-align:left}
 tbody td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
 tbody tr:hover{background:var(--gbg)}
 .mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}
-.right{text-align:right}
-.center{text-align:center}
-
-/* PILL */
+.r{text-align:right}.cen{text-align:center}
 .pill{display:inline-block;padding:3px 9px;border-radius:12px;font-weight:700;font-size:11px;font-family:'IBM Plex Mono',monospace;min-width:58px;text-align:center}
-.ok{background:var(--gbg);color:var(--gd)}
-.warn{background:var(--obg);color:#9A3412}
-.bad{background:var(--rbg);color:var(--red)}
-.over{background:var(--bbg);color:#1E3A8A}
-.none{background:var(--gbg2);color:var(--grey)}
-
-/* BAR */
+.ok{background:var(--gbg);color:var(--gd)}.warn{background:var(--obg);color:#9A3412}
+.bad{background:var(--rbg);color:var(--red)}.over{background:var(--bbg);color:#1E3A8A}.none{background:var(--gbg2);color:var(--grey)}
 .bar-wrap{display:flex;align-items:center;gap:7px;min-width:110px}
 .bar{height:9px;background:var(--line);border-radius:5px;flex:1;overflow:hidden}
-.bfill{height:100%;transition:width .3s;border-radius:5px}
-.bfill.ok-c{background:linear-gradient(90deg,#059669,#34D399)}
-.bfill.warn-c{background:linear-gradient(90deg,#F97316,#FB923C)}
-.bfill.bad-c{background:linear-gradient(90deg,#DC2626,#F87171)}
-.bfill.over-c{background:linear-gradient(90deg,#3D7FFF,#60A5FA)}
-
-/* CHIPS */
+.bf{height:100%;transition:width .3s;border-radius:5px}
+.bf.ok-c{background:linear-gradient(90deg,#059669,#34D399)}.bf.warn-c{background:linear-gradient(90deg,#F97316,#FB923C)}
+.bf.bad-c{background:linear-gradient(90deg,#DC2626,#F87171)}.bf.over-c{background:linear-gradient(90deg,#3D7FFF,#60A5FA)}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
 .chip{background:var(--gbg2);border:1px solid var(--line);border-radius:18px;padding:5px 13px;font-size:11px;cursor:pointer;color:var(--ink2);font-weight:600;transition:all .15s}
-.chip:hover{border-color:var(--gm)} .chip.act{background:var(--gd);color:#fff;border-color:var(--gd)}
-
-/* ALERT */
-.alert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
-.alert{background:linear-gradient(135deg,#FEF2F2,#FFF7ED);border-left:4px solid var(--red);border-radius:10px;padding:14px}
-.alert h3{font-size:13px;color:var(--red);font-weight:700;margin-bottom:6px}
-.alert p{font-size:12px;color:var(--ink2);line-height:1.6}
-.alert .ach{font-family:'Space Grotesk',monospace;font-size:22px;font-weight:700;color:var(--red)}
-
+.chip:hover{border-color:var(--gm)}.chip.act{background:var(--gd);color:#fff;border-color:var(--gd)}
 .legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--ink2);margin-bottom:10px}
 .legend span{display:flex;align-items:center;gap:5px}
 .legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
-
-.footer{text-align:center;padding:16px;color:var(--grey);font-size:11px;font-style:italic;margin-top:8px}
+.alert-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+.alert{background:linear-gradient(135deg,#FEF2F2,#FFF7ED);border-left:4px solid var(--red);border-radius:10px;padding:14px}
+.alert h3{font-size:13px;color:var(--red);font-weight:700;margin-bottom:5px}
+.alert p{font-size:12px;color:var(--ink2);line-height:1.6}
+.av{font-family:'Space Grotesk',monospace;font-size:22px;font-weight:700;color:var(--red)}
+.footer{text-align:center;padding:16px;color:var(--grey);font-size:11px;font-style:italic}
 .footer b{color:var(--gd);font-style:normal}
-
-@media(max-width:680px){.exec-val,.kpi .val{font-size:22px}.hdr-left h1{font-size:20px}}
+@media(max-width:680px){.ecard .ev{font-size:22px}.hdr h1{font-size:20px}}
 </style>
 </head>
-<body>
-<div class="wrap">
+<body><div class="wrap">
 
 <div class="hdr">
-  <div class="hdr-left">
+  <div>
     <h1>ZIGA — รายงานการผลิตประจำวัน</h1>
-    <div class="sub">วันที่ 9 พฤษภาคม 2569 · ผู้รับ: ผู้จัดการฝ่ายผลิต · Steel for Better Life</div>
+    <div class="sub">วันที่ 11 พฤษภาคม 2569 · ผู้รับ: ผู้จัดการฝ่ายผลิต · Steel for Better Life</div>
   </div>
-  <div class="hdr-right">สร้างเมื่อ <span id="ts"></span><br>แหล่งข้อมูล: SharePoint Lists</div>
+  <div class="hdr-r">สร้างเมื่อ <span id="ts"></span><br>แหล่งข้อมูล: SharePoint Lists</div>
 </div>
 
-<!-- EXEC SUMMARY -->
 <div class="exec">
-  <h2>📋 สรุปสถานการณ์สำหรับผู้จัดการฝ่ายผลิต</h2>
-  <div class="exec-grid" id="exec-grid"></div>
+  <h2>📋 สรุปสถานการณ์ประจำวัน</h2>
+  <div class="exec-g" id="exec-g"></div>
 </div>
 
-<!-- BOTTLENECK -->
+<div class="miss-sec">
+  <h2>⚠️ พนักงานที่ยังไม่กรอกรายงาน — ต้องติดตามด่วน</h2>
+  <div class="miss-g" id="miss-g"></div>
+</div>
+
 <div class="sec" id="bot-sec" style="display:none">
-  <h2>🚨 งานที่ตกเป้า (ต้องการการตัดสินใจ) <span class="badge" id="bot-badge"></span></h2>
-  <div class="alert-grid" id="bot-cards"></div>
+  <h2>🚨 งานที่ตกเป้า (< 70%) <span class="badge" id="bot-badge"></span></h2>
+  <div class="alert-g" id="bot-cards"></div>
 </div>
 
-<!-- JOB TABLE -->
 <div class="sec">
   <h2>📊 แผน vs จริง — รายละเอียดทุก Job <span class="badge" id="job-badge"></span></h2>
   <div class="legend">
@@ -133,7 +110,6 @@ tbody tr:hover{background:var(--gbg)}
   <div class="scroll"><table id="jtbl"></table></div>
 </div>
 
-<!-- BREAKDOWN -->
 <div class="sec" id="bd-sec">
   <h2>⚠️ Breakdown Analysis <span class="badge" id="bd-badge"></span></h2>
   <div class="scroll"><table id="bdtbl"></table></div>
@@ -141,160 +117,119 @@ tbody tr:hover{background:var(--gbg)}
 
 <div class="footer">ZIGA Innovation PCL · <b>Production Control Dashboard</b> · Powered by Microsoft 365</div>
 </div>
-
 <script>
-const DATA = [{"Location": "8B", "MachineNo": "SL_01", "JOB No": "OSE26-00133", "JOB No: ชื่องาน": "182.00 x6 (OFM26-00276) , 144.00 x1 (OFM26-00278) , จับข้าง 7*7 -3.20(K450)", "JOB No: ความหนา": 3.2, "JOB No: QtyPlanLines": "50,000", "Cap": "SL01_TH2.8UP_s08", "Cap: CapValue": 167.0, "Cap: CapUnit": "KG/นาที (1ม้วน/ชั่วโมง)", "Cap: SetUp_min": 120.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 10:00", "Start-EndPlan": 120.0, "CapValue": 167.0, "SetUp_min": 0, "StdLoss_min": 0, "Break": 0, "TotalWork-LossTime": 120.0, "QtyPlan": "20,040", "หมายเหตุ": "จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม", "EmpRes: email": "aekkaphob@ziga.co.th; suparp@ziga.co.th; samart@ziga.co.th", "PlanDate": "2026-05-09", "QtyPlan_n": 20040.0, "CapValue_n": 167.0, "TotalWork_n": 120.0, "SetUp_n": 0.0, "CapUnit": "KG/นาที (1ม้วน/ชั่วโมง)", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 120.0, "Availability_pct": 100.0, "Ideal_qty": 20040.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8B", "MachineNo": "SL_02", "JOB No": "OSE26-00125", "JOB No: ชื่องาน": "178.30 x7 (OFM26-00291) , จับข้าง 2.0*1.9 -1.70", "JOB No: ความหนา": 1.7, "JOB No: QtyPlanLines": "30,000", "Cap": "SL02_1.1_to2.5_s08", "Cap: CapValue": 200.0, "Cap: CapUnit": "KG/นาที (1ม้วน/50นาที)", "Cap: SetUp_min": 120.0, "PlanStartDate": "09/05/2026 10:00", "PlanEndDate": "09/05/2026 15:30", "Start-EndPlan": 330.0, "CapValue": 200.0, "SetUp_min": 120, "StdLoss_min": 0, "Break": 60, "TotalWork-LossTime": 150.0, "QtyPlan": "30,000", "หมายเหตุ": "จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม", "EmpRes: email": "aekkaphob@ziga.co.th; suparp@ziga.co.th; samart@ziga.co.th", "PlanDate": "2026-05-09", "QtyPlan_n": 30000.0, "CapValue_n": 200.0, "TotalWork_n": 150.0, "SetUp_n": 120.0, "CapUnit": "KG/นาที (1ม้วน/50นาที)", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 150.0, "Availability_pct": 100.0, "Ideal_qty": 30000.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8B", "MachineNo": "SL_02", "JOB No": "OSE26-00128", "JOB No: ชื่องาน": "126.00 x7 (OFM26-00271) , 182.00 x2, จับข้าง 2*2 -1.95(Z100)", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "40,000", "Cap": "SL02_1.1_to2.5_s08", "Cap: CapValue": 200.0, "Cap: CapUnit": "KG/นาที (1ม้วน/50นาที)", "Cap: SetUp_min": 120.0, "PlanStartDate": "09/05/2026 15:30", "PlanEndDate": "09/05/2026 17:00", "Start-EndPlan": 90.0, "CapValue": 200.0, "SetUp_min": 90, "StdLoss_min": 0, "Break": 0, "TotalWork-LossTime": 0.0, "QtyPlan": "0", "หมายเหตุ": null, "Status": "SET UP by พนักงานเอง", "EmpRes": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม", "EmpRes: email": "aekkaphob@ziga.co.th; suparp@ziga.co.th; samart@ziga.co.th", "PlanDate": "2026-05-09", "QtyPlan_n": 0.0, "CapValue_n": 200.0, "TotalWork_n": 0.0, "SetUp_n": 90.0, "CapUnit": "KG/นาที (1ม้วน/50นาที)", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": null, "Run_min": 0.0, "Availability_pct": null, "Ideal_qty": 0.0, "Performance_pct": null, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8E", "MachineNo": "RF_05", "JOB No": "OFM26-00282", "JOB No: ชื่องาน": "ZIGA มอก.107 น้ำเงินเกลียว 2\" หนา1.95 สกรีน 2.1 มม.16.5+/-", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "2,100", "Cap": "RF05_ZIGA_BSM_12_to_20_s08", "Cap: CapValue": 6.7, "Cap: CapUnit": "เส้น/นาที (40 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 11:00", "Start-EndPlan": 180.0, "CapValue": 6.7, "SetUp_min": 0, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 165.0, "QtyPlan": "1,106", "หมายเหตุ": "จบงาน (ต่อเหล็ก OFM26-00276 HZO2\"x3.2 ไว้ ย้ายไป H8)", "Status": "เดินงานตามปกติ", "EmpRes": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 1106.0, "CapValue_n": 6.7, "TotalWork_n": 165.0, "SetUp_n": 0.0, "CapUnit": "เส้น/นาที (40 เมตร /นาที)", "เครื่องจักร": "RF_05", "เลขที่สั่งผลิต": "OFM26-00282", "Qty_actual": 1734.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "Phusit Buachum", "Achievement_pct": 156.8, "Run_min": 165.0, "Availability_pct": 100.0, "Ideal_qty": 1105.5, "Performance_pct": 156.9, "OEE_pct": 156.9, "Status_calc": "OverProduction"}, {"Location": "8D", "MachineNo": "RF_08", "JOB No": "OFM26-00278", "JOB No: ชื่องาน": "ท่อ HZO1-1/2\"(40) เรียบ หนา 3.2 มม สกรีน 3.2 มม.. 21+/-กก.", "JOB No: ความหนา": 3.2, "JOB No: QtyPlanLines": "1,700", "Cap": "RF08_HZO_12_to_20_s08", "Cap: CapValue": 4.2, "Cap: CapUnit": "เส้น/นาที (25 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "09/05/2026 11:00", "PlanEndDate": "09/05/2026 17:00", "Start-EndPlan": 360.0, "CapValue": 4.2, "SetUp_min": 120, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 225.0, "QtyPlan": "945", "หมายเหตุ": "ทดลองแผงระบบไฟเชื่อมประมาณ 120 นาที (ไม่พักเที่ยง)", "Status": "เดินงานตามปกติ", "EmpRes": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 945.0, "CapValue_n": 4.2, "TotalWork_n": 225.0, "SetUp_n": 120.0, "CapUnit": "เส้น/นาที (25 เมตร /นาที)", "เครื่องจักร": "RF_08", "เลขที่สั่งผลิต": "OFM26-00278", "Qty_actual": 100.0, "BD_min": 140.0, "BD_reasons": "[13.00-14.00] Setup 20นาที | [14.00-15.00] Setup 60นาที | [15.00-16.00] ช่างเทสบอร์ดเชื่อม 60นาที", "Operator": "Phusit Buachum", "Achievement_pct": 10.6, "Run_min": 85.0, "Availability_pct": 37.8, "Ideal_qty": 357.0, "Performance_pct": 28.0, "OEE_pct": 10.6, "Status_calc": "Bottleneck"}, {"Location": "8D", "MachineNo": "RF_07", "JOB No": "OFM26-00262", "JOB No: ชื่องาน": "ZIGA มอก.107 เหลืองเกลียว 1/2\" หนา1.3  สกรีน 1.4 มม. 3.6+/-", "JOB No: ความหนา": 1.3, "JOB No: QtyPlanLines": "14,000", "Cap": "RF07_ZIGA_BSR-S_04_to_10_s08", "Cap: CapValue": 12.5, "Cap: CapUnit": "เส้น/นาที (75 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 16:30", "Start-EndPlan": 510.0, "CapValue": 12.5, "SetUp_min": 0, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 495.0, "QtyPlan": "6,187", "หมายเหตุ": "(ไม่พักเที่ยง) จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 6187.0, "CapValue_n": 12.5, "TotalWork_n": 495.0, "SetUp_n": 0.0, "CapUnit": "เส้น/นาที (75 เมตร /นาที)", "เครื่องจักร": "RF_07", "เลขที่สั่งผลิต": "OFM26-00262", "Qty_actual": 6500.0, "BD_min": 90.0, "BD_reasons": "[10.00-11.00] เปลี่ยนถ่านคอยล์เชื่อม | [13.00-14.00] แก้ไขไฟเชื่อมดับ เอง", "Operator": "Poomin Mansak", "Achievement_pct": 105.1, "Run_min": 405.0, "Availability_pct": 81.8, "Ideal_qty": 5062.5, "Performance_pct": 128.4, "OEE_pct": 105.0, "Status_calc": "OnTarget"}, {"Location": "8D", "MachineNo": "RF_07", "JOB No": "OFM26-00261", "JOB No: ชื่องาน": "ZIGA มอก.107 แดงเรียบ 1/2\" หนา1.3 มม. สกรีน 1.4 มม. 3.6+/-", "JOB No: ความหนา": 1.3, "JOB No: QtyPlanLines": "5,000", "Cap": "RF07_ZIGA_BSR-S_04_to_10_s08", "Cap: CapValue": 12.5, "Cap: CapUnit": "เส้น/นาที (75 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "09/05/2026 16:30", "PlanEndDate": "09/05/2026 20:00", "Start-EndPlan": 210.0, "CapValue": 12.5, "SetUp_min": 30, "StdLoss_min": 15, "Break": 30, "TotalWork-LossTime": 135.0, "QtyPlan": "1,687", "หมายเหตุ": "(พักOTปกติ)", "Status": "เดินงานตามปกติ", "EmpRes": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 1687.0, "CapValue_n": 12.5, "TotalWork_n": 135.0, "SetUp_n": 30.0, "CapUnit": "เส้น/นาที (75 เมตร /นาที)", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 135.0, "Availability_pct": 100.0, "Ideal_qty": 1687.5, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "RF_06", "JOB No": "OFM26-00223", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "JOB No: ความหนา": 0.9, "JOB No: QtyPlanLines": "80,000", "Cap": "RF06_EMT_04_s08", "Cap: CapValue": 18.33, "Cap: CapUnit": "เส้น/นาที (55 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 18.33, "SetUp_min": 0, "StdLoss_min": 60, "Break": 30, "TotalWork-LossTime": 630.0, "QtyPlan": "11,548", "หมายเหตุ": "(ไม่พักเที่ยง/พักOTปกติ)", "Status": "เดินงานตามปกติ", "EmpRes": "นายสุรเชษฐ์ สุดศิลา,นายสงวน สุดแก้ว", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 11548.0, "CapValue_n": 18.33, "TotalWork_n": 630.0, "SetUp_n": 0.0, "CapUnit": "เส้น/นาที (55 เมตร /นาที)", "เครื่องจักร": "RF_06", "เลขที่สั่งผลิต": "OFM26-00223", "Qty_actual": 10400.0, "BD_min": 55.0, "BD_reasons": "[08.00-09.00] เปลี่ยนสายไฟรัดน้ำ+PM=40นาที | [17.30-18.00] พัก=30นาที | [19.00-20.00] 5ส=15นาที", "Operator": "Surachest Sudsila", "Achievement_pct": 90.1, "Run_min": 575.0, "Availability_pct": 91.3, "Ideal_qty": 10539.749999999998, "Performance_pct": 98.7, "OEE_pct": 90.1, "Status_calc": "OnTarget"}, {"Location": "8D", "MachineNo": "TA_A03 (A11)", "JOB No": "OFM26-00262", "JOB No: ชื่องาน": "ZIGA มอก.107 เหลืองเกลียว 1/2\" หนา1.3  สกรีน 1.4 มม. 3.6+/-", "JOB No: ความหนา": 1.3, "JOB No: QtyPlanLines": "14,000", "Cap": "TAA_A11_A15_BSS_M_04_to_06_s08", "Cap: CapValue": 14.0, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 120.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 14.0, "SetUp_min": 150, "StdLoss_min": 30, "Break": 60, "TotalWork-LossTime": 300.0, "QtyPlan": "4,200", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายศิวะกรณ์ สุขเจริญ", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 4200.0, "CapValue_n": 14.0, "TotalWork_n": 300.0, "SetUp_n": 150.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": "TA_A03 (A11)", "เลขที่สั่งผลิต": "OFM26-00262", "Qty_actual": 1000.0, "BD_min": 270.0, "BD_reasons": "[09.00-10.00] 50นาทีsetup | [10.00-11.00] 60นาทีSETUP | [11.00-12.00] 60นาทีSETUP | [12.00-13.00] พัก | [13.00-14.00] 20นาทีท่อรูดกินเบี้ยวเกลียวขาดตั้งใหม่ | [14.00-15.00] 60นาทีท่อรูดดินเบี้ยวเกลียวขาดตั้งใหม่ | [15.00-16.00] 20นาทีท่อรูดกินเบี้ยวเกลียวขาดตั้งใหม่", "Operator": "Siwakorn Sukcharoen", "Achievement_pct": 23.8, "Run_min": 30.0, "Availability_pct": 10.0, "Ideal_qty": 420.0, "Performance_pct": 238.1, "OEE_pct": 23.8, "Status_calc": "Bottleneck"}, {"Location": "8C", "MachineNo": "CH_A06 (B14)", "JOB No": "OFM26-00223", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "JOB No: ความหนา": 0.9, "JOB No: QtyPlanLines": "80,000", "Cap": "CHA_B14_EMT_S_04_s08", "Cap: CapValue": 25.0, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 20.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 25.0, "SetUp_min": 0, "StdLoss_min": 90, "Break": 90, "TotalWork-LossTime": 540.0, "QtyPlan": "13,500", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายกิตติพร เกษประเสริฐ", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 13500.0, "CapValue_n": 25.0, "TotalWork_n": 540.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": "CH_A06 (B14)", "เลขที่สั่งผลิต": "OFM26-00223", "Qty_actual": 12000.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "Kittiporn Kesprasert", "Achievement_pct": 88.9, "Run_min": 540.0, "Availability_pct": 100.0, "Ideal_qty": 13500.0, "Performance_pct": 88.9, "OEE_pct": 88.9, "Status_calc": "Behind"}, {"Location": "8F", "MachineNo": "TA_A05 (A14)", "JOB No": "OFM26-00126", "JOB No: ชื่องาน": "ท่อมอก.107เกลียวเหลืองS STK290-112.0(4\")x2.50x6ม.40.5kgZ80", "JOB No: ความหนา": 2.5, "JOB No: QtyPlanLines": "2,000", "Cap": "TAA_A14_ZIGA_30_to_40_s08", "Cap: CapValue": 3.0, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 120.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 12:00", "Start-EndPlan": 240.0, "CapValue": 3.0, "SetUp_min": 0, "StdLoss_min": 30, "Break": 0, "TotalWork-LossTime": 210.0, "QtyPlan": "630", "หมายเหตุ": "ท่อหมดรอย้ายท่อจากโรง2 (ย้ายไป A15)", "Status": "เดินงานตามปกติ", "EmpRes": "นายวิชัย ด่านมะณี", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 630.0, "CapValue_n": 3.0, "TotalWork_n": 210.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": "TA_A05 (A14)", "เลขที่สั่งผลิต": "OFM26-00126", "Qty_actual": 180.0, "BD_min": 30.0, "BD_reasons": "[08.00-09.00] เปลี่ยนมีดหัวB 20นาที่ | เปลี่ยนมีดหัวบีและทำความสะอาดบริเวณเครื่อง", "Operator": "Wichai Danmanee", "Achievement_pct": 28.6, "Run_min": 180.0, "Availability_pct": 85.7, "Ideal_qty": 540.0, "Performance_pct": 33.3, "OEE_pct": 28.5, "Status_calc": "Bottleneck"}, {"Location": "8E", "MachineNo": "TA_A06 (A15)", "JOB No": "OFM26-00227", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 2นิ้ว-Zero Spangle", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "3,000", "Cap": "TAA_A12_3M_12_to_20_s08", "Cap: CapValue": 6.0, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 120.0, "PlanStartDate": "09/05/2026 13:00", "PlanEndDate": "09/05/2026 22:00", "Start-EndPlan": 540.0, "CapValue": 6.0, "SetUp_min": 0, "StdLoss_min": 60, "Break": 30, "TotalWork-LossTime": 450.0, "QtyPlan": "2,700", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายวิชัย ด่านมะณี", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 2700.0, "CapValue_n": 6.0, "TotalWork_n": 450.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": "TA_A06 (A15)", "เลขที่สั่งผลิต": "OFM26-00227", "Qty_actual": 2077.0, "BD_min": 20.0, "BD_reasons": "[17.30-18.00] เปลี่ยนมีดหัว a | เปลี่ยนมีด", "Operator": "Wichai Danmanee", "Achievement_pct": 76.9, "Run_min": 430.0, "Availability_pct": 95.6, "Ideal_qty": 2580.0, "Performance_pct": 80.5, "OEE_pct": 77.0, "Status_calc": "Behind"}, {"Location": "8C", "MachineNo": "LO_R04 (F4)", "JOB No": "OFM26-00223", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "JOB No: ความหนา": 0.9, "JOB No: QtyPlanLines": "80,000", "Cap": "LOR03_R04_EIR_S_04_to_06_s08", "Cap: CapValue": 17.78, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 15.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 17.78, "SetUp_min": 0, "StdLoss_min": 60, "Break": 90, "TotalWork-LossTime": 570.0, "QtyPlan": "10,135", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 10135.0, "CapValue_n": 17.78, "TotalWork_n": 570.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 570.0, "Availability_pct": 100.0, "Ideal_qty": 10134.6, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "LO_R03 (F3)", "JOB No": "OFM26-00227", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 2นิ้ว-Zero Spangle", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "3,000", "Cap": "LOR03_R04_EIR_S_20_s08", "Cap: CapValue": 6.67, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 15.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 6.67, "SetUp_min": 30, "StdLoss_min": 120, "Break": 60, "TotalWork-LossTime": 330.0, "QtyPlan": "2,201", "หมายเหตุ": "(ย้ายท่อข้ามฝั่งประมาณ 120 นาที)", "Status": "เดินงานตามปกติ", "EmpRes": "นายธัณพิสิฐ น้อมนุช", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 2201.0, "CapValue_n": 6.67, "TotalWork_n": 330.0, "SetUp_n": 30.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 330.0, "Availability_pct": 100.0, "Ideal_qty": 2201.1, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "PA_EL01 (P4-ราง1)", "JOB No": "OFM26-00259", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 1-1/2นิ้ว", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "2,000", "Cap": "PA_EL010203_IMC_15_s08", "Cap: CapValue": 1.62, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 18:00", "Start-EndPlan": 600.0, "CapValue": 1.62, "SetUp_min": 0, "StdLoss_min": 0, "Break": 90, "TotalWork-LossTime": 510.0, "QtyPlan": "826", "หมายเหตุ": "จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 826.0, "CapValue_n": 1.62, "TotalWork_n": 510.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 510.0, "Availability_pct": 100.0, "Ideal_qty": 826.2, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "PA_EL01 (P4-ราง1)", "JOB No": "OFM26-00237", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- EMT HDG 1-1/2นิ้ว", "JOB No: ความหนา": 1.35, "JOB No: QtyPlanLines": "2,500", "Cap": "PA_EL010203_EMT_15_s08", "Cap: CapValue": 6.45, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 18:00", "PlanEndDate": "09/05/2026 22:00", "Start-EndPlan": 240.0, "CapValue": 6.45, "SetUp_min": 0, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 225.0, "QtyPlan": "1,451", "หมายเหตุ": "จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 1451.0, "CapValue_n": 6.45, "TotalWork_n": 225.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 225.0, "Availability_pct": 100.0, "Ideal_qty": 1451.25, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "PA_EL02 (P4-ราง2)", "JOB No": "OFM26-00208", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 3/4นิ้ว-โรงงาน RZ", "JOB No: ความหนา": 1.6, "JOB No: QtyPlanLines": "16,400", "Cap": "PA_EL010203_IMC_06_s08", "Cap: CapValue": 4.3, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 4.3, "SetUp_min": 0, "StdLoss_min": 0, "Break": 60, "TotalWork-LossTime": 480.0, "QtyPlan": "2,064", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 2064.0, "CapValue_n": 4.3, "TotalWork_n": 480.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 480.0, "Availability_pct": 100.0, "Ideal_qty": 2064.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "PA_EL02 (P4-ราง2)", "JOB No": "OFM26-00227", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 2นิ้ว-Zero Spangle", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "3,000", "Cap": "PA_EL010203_IMC_20_s08", "Cap: CapValue": 1.32, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 17:30", "PlanEndDate": "09/05/2026 22:00", "Start-EndPlan": 270.0, "CapValue": 1.32, "SetUp_min": 0, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 255.0, "QtyPlan": "337", "หมายเหตุ": "งานนัดส่ง จันทร์ 11/5/69", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 337.0, "CapValue_n": 1.32, "TotalWork_n": 255.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 255.0, "Availability_pct": 100.0, "Ideal_qty": 336.6, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8D", "MachineNo": "LO_R01+PA_M01 (F1P1)", "JOB No": "OFM26-00242", "JOB No: ชื่องาน": "ท่อมอก.107-Zuper Ziga น้ำเงินเกลียว 1\"x2.8(3.0)มม.12.50 kg.", "JOB No: ความหนา": 2.8, "JOB No: QtyPlanLines": "2,000", "Cap": "LOR01_R05_Zuper_04_to_20_s08", "Cap: CapValue": 8.0, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 15.0, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 12:00", "Start-EndPlan": 240.0, "CapValue": 4.0, "SetUp_min": 0, "StdLoss_min": 0, "Break": 0, "TotalWork-LossTime": 240.0, "QtyPlan": "960", "หมายเหตุ": "(พ่นสีเกลียวก่อนแพ็ค) จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 960.0, "CapValue_n": 4.0, "TotalWork_n": 240.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 240.0, "Availability_pct": 100.0, "Ideal_qty": 960.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8D", "MachineNo": "LO_R01+PA_M01 (F1P1)", "JOB No": "OFM26-00294", "JOB No: ชื่องาน": "Zuper ZIGA น้ำเงินเกลียว 1\" หนา3.2 มม.สกรีน 3.2 มม.14.7+/-", "JOB No: ความหนา": 3.2, "JOB No: QtyPlanLines": "100", "Cap": "LOR01_R05_Zuper_04_to_20_s08", "Cap: CapValue": 8.0, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 15.0, "PlanStartDate": "09/05/2026 13:00", "PlanEndDate": "09/05/2026 13:30", "Start-EndPlan": 30.0, "CapValue": 4.0, "SetUp_min": 0, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 15.0, "QtyPlan": "60", "หมายเหตุ": "(พ่นสีเกลียวก่อนแพ็ค) จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 60.0, "CapValue_n": 4.0, "TotalWork_n": 15.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 15.0, "Availability_pct": 100.0, "Ideal_qty": 60.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องโค้ง", "MachineNo": "CU_HS05 (ตัดท่อโค้ง)", "JOB No": "ORW26-00105", "JOB No: ชื่องาน": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "500", "Cap": "CU_ELBOW_20_s08", "Cap: CapValue": 2.0, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 2.0, "SetUp_min": 0, "StdLoss_min": 15, "Break": 90, "TotalWork-LossTime": 615.0, "QtyPlan": "1,230", "หมายเหตุ": "ยังไม่เคยจับCapจริง", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 1230.0, "CapValue_n": 2.0, "TotalWork_n": 615.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 615.0, "Availability_pct": 100.0, "Ideal_qty": 1230.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องโค้ง", "MachineNo": "CH_ELBOW01 (เครื่องลบคมท่อโค้ง)", "JOB No": "ORW26-00081", "JOB No: ชื่องาน": "ท่อโค้ง90' IMC-HDG 1-1/2นิ้ว", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "220", "Cap": "CH_ELBOW_12_to_20_s08", "Cap: CapValue": 0.5, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 0.5, "SetUp_min": 0, "StdLoss_min": 15, "Break": 90, "TotalWork-LossTime": 615.0, "QtyPlan": "308", "หมายเหตุ": "ยังไม่เคยจับCapจริง", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 308.0, "CapValue_n": 0.5, "TotalWork_n": 615.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 615.0, "Availability_pct": 100.0, "Ideal_qty": 307.5, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องโค้ง", "MachineNo": "BE_M03 (เครื่องดัดโค้ง- size ใหญ่)", "JOB No": "ORW26-00054", "JOB No: ชื่องาน": "ท่อโค้ง90' IMC-HDG 3นิ้ว", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "120", "Cap": "ELBOW_30_to_40_s08", "Cap: CapValue": 0.2, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 0.2, "SetUp_min": 0, "StdLoss_min": 15, "Break": 60, "TotalWork-LossTime": 465.0, "QtyPlan": "93", "หมายเหตุ": "ยังไม่เคยจับCapจริง", "Status": "เดินงานตามปกติ", "EmpRes": "นายมนตรี รักเสมอวงค์", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 93.0, "CapValue_n": 0.2, "TotalWork_n": 465.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 465.0, "Availability_pct": 100.0, "Ideal_qty": 93.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องข้อต่อ", "MachineNo": "CU_BL01(AMADA ใหญ่)", "JOB No": "ORW26-00093", "JOB No: ชื่องาน": "ข้อต่อ 4\" รอส่งทำเกลียว", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "924", "Cap": "CU_BL01_30_to_50_s08", "Cap: CapValue": 0.5, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 0.5, "SetUp_min": 0, "StdLoss_min": 75, "Break": 90, "TotalWork-LossTime": 555.0, "QtyPlan": "278", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายวิทัต วุฒิวิมล", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 278.0, "CapValue_n": 0.5, "TotalWork_n": 555.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 555.0, "Availability_pct": 100.0, "Ideal_qty": 277.5, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-เกลียว", "JOB No": "ORW26-00074", "JOB No: ชื่องาน": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว(RSC Super)", "JOB No: ความหนา": 4.0, "JOB No: QtyPlanLines": "2,200", "Cap": "CPTA_10_to_20_s08", "Cap: CapValue": 2.0, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 2.0, "SetUp_min": 0, "StdLoss_min": 30, "Break": 90, "TotalWork-LossTime": 600.0, "QtyPlan": "1,200", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายวิทัต วุฒิวิมล", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 1200.0, "CapValue_n": 2.0, "TotalWork_n": 600.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 600.0, "Availability_pct": 100.0, "Ideal_qty": 1200.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-อัด", "JOB No": "ORW26-00075", "JOB No: ชื่องาน": "ข้อต่อท่อร้อยสายไฟ HDG 1นิ้ว รุ่นSuper", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "7,616", "Cap": "CPอัด_10_to_20_s08", "Cap: CapValue": 4.0, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 4.0, "SetUp_min": 0, "StdLoss_min": 30, "Break": 90, "TotalWork-LossTime": 600.0, "QtyPlan": "2,400", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 2400.0, "CapValue_n": 4.0, "TotalWork_n": 600.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 600.0, "Availability_pct": 100.0, "Ideal_qty": 2400.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-ล้าง", "JOB No": "ORW26-00087", "JOB No: ชื่องาน": "ข้อต่อท่อร้อยสายไฟ HDG 2-1/2นิ้ว", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "1,022", "Cap": "CPล้าง_25_s08", "Cap: CapValue": 2.0, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "09/05/2026 08:00", "PlanEndDate": "09/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 2.0, "SetUp_min": 0, "StdLoss_min": 30, "Break": 60, "TotalWork-LossTime": 450.0, "QtyPlan": "900", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายรุ่งโรจน์ วามะลุน", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 900.0, "CapValue_n": 2.0, "TotalWork_n": 450.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 450.0, "Availability_pct": 100.0, "Ideal_qty": 900.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8D", "MachineNo": "LO_R06+PA_M06 (F6P6)", "JOB No": "OFM26-00265", "JOB No: ชื่องาน": "ZIGA มอก.107 เหลืองเกลียว 1-1/4\" หนา1.6 สกรีน 1.8 มม. 9.2+/-", "JOB No: ความหนา": 1.6, "JOB No: QtyPlanLines": "3,000", "Cap": "LOR06_R08_ZIGA_12_s08", "Cap: CapValue": 8.13, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 15.0, "PlanStartDate": "09/05/2026 13:30", "PlanEndDate": "09/05/2026 22:00", "Start-EndPlan": 510.0, "CapValue": 8.13, "SetUp_min": 30, "StdLoss_min": 0, "Break": 30, "TotalWork-LossTime": 450.0, "QtyPlan": "3,658", "หมายเหตุ": "(เช็ดท่อคราบขาวด้วย) จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-09", "QtyPlan_n": 3658.0, "CapValue_n": 8.13, "TotalWork_n": 450.0, "SetUp_n": 30.0, "CapUnit": "เส้น / นาที", "เครื่องจักร": null, "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": null, "Achievement_pct": 0.0, "Run_min": 450.0, "Availability_pct": 100.0, "Ideal_qty": 3658.5000000000005, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}];
+const DATA   = [{"Location": "8B", "MachineNo": "SL_02", "JOB No": "OSE26-00128", "JOB No: ชื่องาน": "126.00 x7 (OFM26-00271) , 182.00 x2, จับข้าง 2*2 -1.95(Z100)", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "40,000", "Cap": "SL02_1.1_to2.5_s08", "Cap: CapValue": 200.0, "Cap: CapUnit": "KG/นาที (1ม้วน/50นาที)", "Cap: SetUp_min": 120.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 12:00", "Start-EndPlan": 240.0, "CapValue": 200.0, "SetUp_min": 30, "StdLoss_min": 0, "Break": 0, "TotalWork-LossTime": 210.0, "QtyPlan": "42,000", "หมายเหตุ": "จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "นายเอกภพ ภู่ศรีพงษ์,นายสามารถ ดาสม,นายสุภาพ เม่นแก้ว", "EmpRes: email": "aekkaphob@ziga.co.th; samart@ziga.co.th; suparp@ziga.co.th", "PlanDate": "2026-05-11", "QtyPlan_n": 42000.0, "CapValue_n": 200.0, "TotalWork_n": 210.0, "SetUp_n": 30.0, "CapUnit": "KG/นาที (1ม้วน/50นาที)", "MachineNorm": "SL_02", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 210.0, "Availability_pct": 100.0, "Ideal_qty": 42000.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8B", "MachineNo": "SL_02", "JOB No": "OSE26-00127", "JOB No: ชื่องาน": "126.00 x7 (OFM26-00281) , 182.00 x2, จับข้าง 2*2 -1.95", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "40,000", "Cap": "SL02_1.1_to2.5_s08", "Cap: CapValue": 200.0, "Cap: CapUnit": "KG/นาที (1ม้วน/50นาที)", "Cap: SetUp_min": 120.0, "PlanStartDate": "11/05/2026 13:00", "PlanEndDate": "11/05/2026 16:30", "Start-EndPlan": 210.0, "CapValue": 200.0, "SetUp_min": 0, "StdLoss_min": 0, "Break": 0, "TotalWork-LossTime": 210.0, "QtyPlan": "42,000", "หมายเหตุ": "จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "นายเอกภพ ภู่ศรีพงษ์,นายสามารถ ดาสม,นายสุภาพ เม่นแก้ว", "EmpRes: email": "aekkaphob@ziga.co.th; samart@ziga.co.th; suparp@ziga.co.th", "PlanDate": "2026-05-11", "QtyPlan_n": 42000.0, "CapValue_n": 200.0, "TotalWork_n": 210.0, "SetUp_n": 0.0, "CapUnit": "KG/นาที (1ม้วน/50นาที)", "MachineNorm": "SL_02", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 210.0, "Availability_pct": 100.0, "Ideal_qty": 42000.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8B", "MachineNo": "SL_02", "JOB No": "OSE26-00124", "JOB No: ชื่องาน": "97.20 x12 (OFM26-00289) , 80.00 x1, จับข้าง 2.3*2.3 -1.60", "JOB No: ความหนา": 1.6, "JOB No: QtyPlanLines": "40,000", "Cap": "SL02_1.1_to2.5_s08", "Cap: CapValue": 200.0, "Cap: CapUnit": "KG/นาที (1ม้วน/50นาที)", "Cap: SetUp_min": 120.0, "PlanStartDate": "11/05/2026 16:30", "PlanEndDate": "11/05/2026 17:00", "Start-EndPlan": 30.0, "CapValue": 200.0, "SetUp_min": 30, "StdLoss_min": 0, "Break": 0, "TotalWork-LossTime": 0.0, "QtyPlan": "0", "หมายเหตุ": null, "Status": "SET UP by พนักงานเอง", "EmpRes": "นายเอกภพ ภู่ศรีพงษ์,นายสุภาพ เม่นแก้ว,นายสามารถ ดาสม", "EmpRes: email": "aekkaphob@ziga.co.th; suparp@ziga.co.th; samart@ziga.co.th", "PlanDate": "2026-05-11", "QtyPlan_n": 0.0, "CapValue_n": 200.0, "TotalWork_n": 0.0, "SetUp_n": 30.0, "CapUnit": "KG/นาที (1ม้วน/50นาที)", "MachineNorm": "SL_02", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": null, "Run_min": 0.0, "Availability_pct": null, "Ideal_qty": 0.0, "Performance_pct": null, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "RF_06", "JOB No": "OFM26-00223", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "JOB No: ความหนา": 0.9, "JOB No: QtyPlanLines": "80,000", "Cap": "RF06_EMT_04_s08", "Cap: CapValue": 18.33, "Cap: CapUnit": "เส้น/นาที (55 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 18.33, "SetUp_min": 0, "StdLoss_min": 45, "Break": 0, "TotalWork-LossTime": 495.0, "QtyPlan": "9,073", "หมายเหตุ": "(ไม่พักเที่ยง)", "Status": "เดินงานตามปกติ", "EmpRes": "นายสุรเชษฐ์ สุดศิลา,นายสงวน สุดแก้ว", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 9073.0, "CapValue_n": 18.33, "TotalWork_n": 495.0, "SetUp_n": 0.0, "CapUnit": "เส้น/นาที (55 เมตร /นาที)", "MachineNorm": "RF_06", "เลขที่สั่งผลิต": "OFM26-00223", "Qty_actual": 7800.0, "BD_min": 100.0, "BD_reasons": "[08.00-09.00] PM +เปลี่ยนหัวทองแดงพ่นซิงค์=25นาที | [09.00-10.00] เหล็กสลีทใส้แตกบนuncoiler=60นาที | [16.00-17.00] 5ส=15นาที", "Operator": "Surachest Sudsila", "Achievement_pct": 86.0, "Run_min": 395.0, "Availability_pct": 79.8, "Ideal_qty": 7240.349999999999, "Performance_pct": 107.7, "OEE_pct": 85.9, "Status_calc": "Behind"}, {"Location": "8D", "MachineNo": "RF_07", "JOB No": "OFM26-00261", "JOB No: ชื่องาน": "ZIGA มอก.107 แดงเรียบ 1/2\" หนา1.3 มม. สกรีน 1.4 มม. 3.6+/-", "JOB No: ความหนา": 1.3, "JOB No: QtyPlanLines": "5,000", "Cap": "RF07_ZIGA_BSR-S_04_to_10_s08", "Cap: CapValue": 12.5, "Cap: CapUnit": "เส้น/นาที (75 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 13:00", "Start-EndPlan": 300.0, "CapValue": 12.5, "SetUp_min": 0, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 285.0, "QtyPlan": "3,562", "หมายเหตุ": "(ไม่พักเที่ยง) จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 3562.0, "CapValue_n": 12.5, "TotalWork_n": 285.0, "SetUp_n": 0.0, "CapUnit": "เส้น/นาที (75 เมตร /นาที)", "MachineNorm": "RF_07", "เลขที่สั่งผลิต": "OFM26-00261", "Qty_actual": 5272.0, "BD_min": 0.0, "BD_reasons": "[15.00-16.00] จบงาน", "Operator": "Poomin Mansak", "Achievement_pct": 148.0, "Run_min": 285.0, "Availability_pct": 100.0, "Ideal_qty": 3562.5, "Performance_pct": 148.0, "OEE_pct": 148.0, "Status_calc": "OverProduction"}, {"Location": "8D", "MachineNo": "RF_07", "JOB No": "OFM26-00257", "JOB No: ชื่องาน": "ZIGA มอก.107 น้ำเงินเรียบ 1/2\" หนา1.90 มม.สกรีน 2.0 มม.5.3kg", "JOB No: ความหนา": 1.9, "JOB No: QtyPlanLines": "2,100", "Cap": "RF07_ZIGA_BSM_04_to_10_s08", "Cap: CapValue": 10.0, "Cap: CapUnit": "เส้น/นาที (60 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "11/05/2026 13:00", "PlanEndDate": "11/05/2026 17:00", "Start-EndPlan": 240.0, "CapValue": 10.0, "SetUp_min": 60, "StdLoss_min": 0, "Break": 0, "TotalWork-LossTime": 180.0, "QtyPlan": "1,800", "หมายเหตุ": "(มีช่วงปรับ OD)", "Status": "เดินงานตามปกติ", "EmpRes": "นายภูมินทร์ มั่นศักดิ์,นายสงบ การบรรจง", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 1800.0, "CapValue_n": 10.0, "TotalWork_n": 180.0, "SetUp_n": 60.0, "CapUnit": "เส้น/นาที (60 เมตร /นาที)", "MachineNorm": "RF_07", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 180.0, "Availability_pct": 100.0, "Ideal_qty": 1800.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8D", "MachineNo": "RF_08", "JOB No": "OFM26-00278", "JOB No: ชื่องาน": "ท่อ HZO1-1/2\"(40) เรียบ หนา 3.2 มม สกรีน 3.2 มม.. 21+/-กก.", "JOB No: ความหนา": 3.2, "JOB No: QtyPlanLines": "1,700", "Cap": "RF08_HZO_12_to_20_s08", "Cap: CapValue": 4.2, "Cap: CapUnit": "เส้น/นาที (25 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 14:00", "Start-EndPlan": 360.0, "CapValue": 4.2, "SetUp_min": 0, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 345.0, "QtyPlan": "1,449", "หมายเหตุ": "(ไม่พักเที่ยง) จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 1449.0, "CapValue_n": 4.2, "TotalWork_n": 345.0, "SetUp_n": 0.0, "CapUnit": "เส้น/นาที (25 เมตร /นาที)", "MachineNorm": "RF_08", "เลขที่สั่งผลิต": "OFM26-00278", "Qty_actual": 1635.0, "BD_min": 160.0, "BD_reasons": "[08.00-09.00] เปลี่ยนคอย 30นาที | [09.00-10.00] เปลี่ยนถ่าน 30นาที | [10.00-11.00] เปลี่ยนถ่ายเชื่อม 40นาที | [14.00-15.00] หน้าเหล็กมาผิดปกติ 60นาที", "Operator": "Phusit Buachum", "Achievement_pct": 112.8, "Run_min": 185.0, "Availability_pct": 53.6, "Ideal_qty": 777.0, "Performance_pct": 210.4, "OEE_pct": 112.8, "Status_calc": "OverProduction"}, {"Location": "8C", "MachineNo": "RF_08", "JOB No": "OFM26-00272", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 1-1/2นิ้ว", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "3,600", "Cap": "RF050708_EMT_IMC_12_to_20_s08", "Cap: CapValue": 13.3, "Cap: CapUnit": "เส้น/นาที (80 เมตร /นาที)", "Cap: SetUp_min": 360.0, "PlanStartDate": "11/05/2026 14:00", "PlanEndDate": "11/05/2026 17:00", "Start-EndPlan": 180.0, "CapValue": 13.3, "SetUp_min": 60, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 105.0, "QtyPlan": "1,397", "หมายเหตุ": "(มีช่วงปรับ OD+ความยาวท่อ)", "Status": "เดินงานตามปกติ", "EmpRes": "นายภูษิต บัวชุม,นายอุเทน กองสิงห์", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 1397.0, "CapValue_n": 13.3, "TotalWork_n": 105.0, "SetUp_n": 60.0, "CapUnit": "เส้น/นาที (80 เมตร /นาที)", "MachineNorm": "RF_08", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 105.0, "Availability_pct": 100.0, "Ideal_qty": 1396.5, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "CH_A06 (B14)", "JOB No": "OFM26-00223", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "JOB No: ความหนา": 0.9, "JOB No: QtyPlanLines": "80,000", "Cap": "CHA_B14_EMT_S_04_s08", "Cap: CapValue": 25.0, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 20.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 25.0, "SetUp_min": 0, "StdLoss_min": 90, "Break": 90, "TotalWork-LossTime": 540.0, "QtyPlan": "13,500", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายกิตติพร เกษประเสริฐ", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 13500.0, "CapValue_n": 25.0, "TotalWork_n": 540.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "CH_A06", "เลขที่สั่งผลิต": "OFM26-00223", "Qty_actual": 12000.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "Kittiporn Kesprasert", "Achievement_pct": 88.9, "Run_min": 540.0, "Availability_pct": 100.0, "Ideal_qty": 13500.0, "Performance_pct": 88.9, "OEE_pct": 88.9, "Status_calc": "Behind"}, {"Location": "8D", "MachineNo": "TA_A03 (A11)", "JOB No": "OFM26-00262", "JOB No: ชื่องาน": "ZIGA มอก.107 เหลืองเกลียว 1/2\" หนา1.3  สกรีน 1.4 มม. 3.6+/-", "JOB No: ความหนา": 1.3, "JOB No: QtyPlanLines": "14,000", "Cap": "TAA_A11_A15_BSS_M_04_to_06_s08", "Cap: CapValue": 14.0, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 120.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 14.0, "SetUp_min": 0, "StdLoss_min": 230, "Break": 90, "TotalWork-LossTime": 220.0, "QtyPlan": "3,080", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายนาราภัทร สายจันดี", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 3080.0, "CapValue_n": 14.0, "TotalWork_n": 220.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "TA_A03", "เลขที่สั่งผลิต": "OFM26-00262", "Qty_actual": 3176.0, "BD_min": 70.0, "BD_reasons": "[09.00-10.00] 09:50-10:30 แค้มป์หัวB หลุด หยุดเครื่องใส่แค้มป์ใหม่+ปรับชิ้นงานใหม่ | [10.00-11.00] 10:30-11:00 เปลี่ยนสายยางน้ำหัว A สายยางแตก", "Operator": "Narapat Saichandee", "Achievement_pct": 103.1, "Run_min": 150.0, "Availability_pct": 68.2, "Ideal_qty": 2100.0, "Performance_pct": 151.2, "OEE_pct": 103.1, "Status_calc": "OnTarget"}, {"Location": "8F", "MachineNo": "CH_A02 (B9)", "JOB No": "OFM26-00273", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 2นิ้ว-Zero Spangle", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "5,000", "Cap": "CHA_B9_10_IMC_RSC_12_to_20_s08", "Cap: CapValue": 6.0, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 20.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 22:00", "Start-EndPlan": 840.0, "CapValue": 6.0, "SetUp_min": 0, "StdLoss_min": 150, "Break": 90, "TotalWork-LossTime": 600.0, "QtyPlan": "3,600", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายวิชัย ด่านมะณี", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 3600.0, "CapValue_n": 6.0, "TotalWork_n": 600.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "CH_A02", "เลขที่สั่งผลิต": "OFM26-00273", "Qty_actual": 4547.0, "BD_min": 60.0, "BD_reasons": "[08.00-09.00] 08:00-08:30  08:30 ย้ายไปA11 | [08.00-09.00] เปลี่ยนสายลมขาเตะหัวบี 30นาที | [17.30-18.00] เปลี่ยนมีดหมอเอและ b | เปลี่ยนสายลมและเปลี่ยนมีด", "Operator": "Narapat Saichandee", "Achievement_pct": 126.3, "Run_min": 540.0, "Availability_pct": 90.0, "Ideal_qty": 3240.0, "Performance_pct": 140.3, "OEE_pct": 126.3, "Status_calc": "OverProduction"}, {"Location": "8C", "MachineNo": "LO_R03 (F3)", "JOB No": "OFM26-00227", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 2นิ้ว-Zero Spangle", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "3,000", "Cap": "LOR03_R04_EIR_S_20_s08", "Cap: CapValue": 6.67, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 15.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 12:00", "Start-EndPlan": 240.0, "CapValue": 6.67, "SetUp_min": 0, "StdLoss_min": 40, "Break": 60, "TotalWork-LossTime": 140.0, "QtyPlan": "934", "หมายเหตุ": "จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "นายธัณพิสิฐ น้อมนุช", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 934.0, "CapValue_n": 6.67, "TotalWork_n": 140.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "LO_R03", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 140.0, "Availability_pct": 100.0, "Ideal_qty": 933.8, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "LO_R04 (F4)", "JOB No": "OFM26-00223", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "JOB No: ความหนา": 0.9, "JOB No: QtyPlanLines": "80,000", "Cap": "LOR03_R04_EIR_S_04_to_06_s08", "Cap: CapValue": 17.78, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 15.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 17.78, "SetUp_min": 0, "StdLoss_min": 60, "Break": 90, "TotalWork-LossTime": 570.0, "QtyPlan": "10,135", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายธัณพิสิฐ น้อมนุช", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 10135.0, "CapValue_n": 17.78, "TotalWork_n": 570.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "LO_R04", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 570.0, "Availability_pct": 100.0, "Ideal_qty": 10134.6, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "PA_EL01 (P4-ราง1)", "JOB No": "OFM26-00198", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- RSC 1-1/2นิ้ว", "JOB No: ความหนา": 2.8, "JOB No: QtyPlanLines": "800", "Cap": "PA_EL010203_IMC_15_s08", "Cap: CapValue": 1.62, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 14:30", "Start-EndPlan": 390.0, "CapValue": 1.62, "SetUp_min": 0, "StdLoss_min": 0, "Break": 60, "TotalWork-LossTime": 330.0, "QtyPlan": "535", "หมายเหตุ": "จบงาน", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 535.0, "CapValue_n": 1.62, "TotalWork_n": 330.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "PA_EL01", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 330.0, "Availability_pct": 100.0, "Ideal_qty": 534.6, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "PA_EL01 (P4-ราง1)", "JOB No": "OFM26-00208", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 3/4นิ้ว-โรงงาน RZ", "JOB No: ความหนา": 1.6, "JOB No: QtyPlanLines": "16,400", "Cap": "PA_EL010203_IMC_06_s08", "Cap: CapValue": 4.3, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 14:30", "PlanEndDate": "11/05/2026 22:00", "Start-EndPlan": 450.0, "CapValue": 4.3, "SetUp_min": 0, "StdLoss_min": 15, "Break": 30, "TotalWork-LossTime": 405.0, "QtyPlan": "1,742", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 1742.0, "CapValue_n": 4.3, "TotalWork_n": 405.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "PA_EL01", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 405.0, "Availability_pct": 100.0, "Ideal_qty": 1741.5, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "PA_EL02 (P4-ราง2)", "JOB No": "OFM26-00223", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- EMT HDG 1/2นิ้ว-S01 (2P)", "JOB No: ความหนา": 0.9, "JOB No: QtyPlanLines": "80,000", "Cap": "PA_EL010203_EMT_04_s08", "Cap: CapValue": 17.21, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 17.21, "SetUp_min": 0, "StdLoss_min": 15, "Break": 60, "TotalWork-LossTime": 465.0, "QtyPlan": "8,003", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 8003.0, "CapValue_n": 17.21, "TotalWork_n": 465.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "PA_EL02", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 465.0, "Availability_pct": 100.0, "Ideal_qty": 8002.650000000001, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8C", "MachineNo": "PA_EL02 (P4-ราง2)", "JOB No": "OFM26-00227", "JOB No: ชื่องาน": "ท่อร้อยสายไฟDAIWA- IMC HDG 2นิ้ว-Zero Spangle", "JOB No: ความหนา": 1.95, "JOB No: QtyPlanLines": "3,000", "Cap": "PA_EL010203_IMC_20_s08", "Cap: CapValue": 1.32, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 17:30", "PlanEndDate": "11/05/2026 22:00", "Start-EndPlan": 270.0, "CapValue": 1.32, "SetUp_min": 0, "StdLoss_min": 15, "Break": 0, "TotalWork-LossTime": 255.0, "QtyPlan": "337", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 337.0, "CapValue_n": 1.32, "TotalWork_n": 255.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "PA_EL02", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 255.0, "Availability_pct": 100.0, "Ideal_qty": 336.6, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8F", "MachineNo": "LO_R02+PA_M02 (F2P2)", "JOB No": "OFM26-00126", "JOB No: ชื่องาน": "ท่อมอก.107เกลียวเหลืองS STK290-112.0(4\")x2.50x6ม.40.5kgZ80", "JOB No: ความหนา": 2.5, "JOB No: QtyPlanLines": "2,000", "Cap": "LOR02_ZIGA_40_s08", "Cap: CapValue": 1.33, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 15.0, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 1.33, "SetUp_min": 0, "StdLoss_min": 0, "Break": 60, "TotalWork-LossTime": 480.0, "QtyPlan": "638", "หมายเหตุ": "ท่อหมดย้ายไป F6P6", "Status": "แพ็คแบบเหมา", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 638.0, "CapValue_n": 1.33, "TotalWork_n": 480.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "LO_R02+PA_M02", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 480.0, "Availability_pct": 100.0, "Ideal_qty": 638.4000000000001, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "8D", "MachineNo": "LO_R06+PA_M06 (F6P6)", "JOB No": "OFM26-00262", "JOB No: ชื่องาน": "ZIGA มอก.107 เหลืองเกลียว 1/2\" หนา1.3  สกรีน 1.4 มม. 3.6+/-", "JOB No: ความหนา": 1.3, "JOB No: QtyPlanLines": "14,000", "Cap": "LOR06_R08_ZIGA_04_s08", "Cap: CapValue": 9.15, "Cap: CapUnit": "เส้น / นาที", "Cap: SetUp_min": 15.0, "PlanStartDate": "11/05/2026 17:30", "PlanEndDate": "11/05/2026 22:00", "Start-EndPlan": 270.0, "CapValue": 9.15, "SetUp_min": 0, "StdLoss_min": 0, "Break": 0, "TotalWork-LossTime": 270.0, "QtyPlan": "2,471", "หมายเหตุ": null, "Status": "แพ็คแบบเหมา", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 2471.0, "CapValue_n": 9.15, "TotalWork_n": 270.0, "SetUp_n": 0.0, "CapUnit": "เส้น / นาที", "MachineNorm": "LO_R06+PA_M06", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 270.0, "Availability_pct": 100.0, "Ideal_qty": 2470.5, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องข้อต่อ", "MachineNo": "CU_BL01(AMADA ใหญ่)", "JOB No": "ORW26-00093", "JOB No: ชื่องาน": "ข้อต่อ 4\" รอส่งทำเกลียว", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "924", "Cap": "CU_BL01_30_to_50_s08", "Cap: CapValue": 0.5, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 0.5, "SetUp_min": 0, "StdLoss_min": 60, "Break": 90, "TotalWork-LossTime": 570.0, "QtyPlan": "285", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายวิทัต วุฒิวิมล", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 285.0, "CapValue_n": 0.5, "TotalWork_n": 570.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "MachineNorm": "CU_BL01", "เลขที่สั่งผลิต": "ORW26-00093", "Qty_actual": 195.0, "BD_min": 0.0, "BD_reasons": "[19.00-20.00] 195ตัว | ตั้งเครื่องลบคม\nขึ้นท่อตัด\nปรับแต่งเครื่องจักร", "Operator": "Vitas Vutivimon", "Achievement_pct": 68.4, "Run_min": 570.0, "Availability_pct": 100.0, "Ideal_qty": 285.0, "Performance_pct": 68.4, "OEE_pct": 68.4, "Status_calc": "Bottleneck"}, {"Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-อัด", "JOB No": "ORW26-00075", "JOB No: ชื่องาน": "ข้อต่อท่อร้อยสายไฟ HDG 1นิ้ว รุ่นSuper", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "7,616", "Cap": "CPอัด_10_to_20_s08", "Cap: CapValue": 4.0, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 4.0, "SetUp_min": 0, "StdLoss_min": 60, "Break": 90, "TotalWork-LossTime": 570.0, "QtyPlan": "2,280", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 2280.0, "CapValue_n": 4.0, "TotalWork_n": 570.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "MachineNorm": "ข้อต่อ-อัด", "เลขที่สั่งผลิต": "ORW26-00075", "Qty_actual": 850.0, "BD_min": 0.0, "BD_reasons": "[11.00-12.00] เริ่มอัด | [19.00-20.00] 850 ตัว  อัด2รอบ", "Operator": "Vitas Vutivimon", "Achievement_pct": 37.3, "Run_min": 570.0, "Availability_pct": 100.0, "Ideal_qty": 2280.0, "Performance_pct": 37.3, "OEE_pct": 37.3, "Status_calc": "Bottleneck"}, {"Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-เกลียว", "JOB No": "ORW26-00074", "JOB No: ชื่องาน": "ข้อต่อท่อร้อยสายไฟ HDG 2นิ้ว(RSC Super)", "JOB No: ความหนา": 4.0, "JOB No: QtyPlanLines": "2,200", "Cap": "CPTA_10_to_20_s08", "Cap: CapValue": 2.0, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 2.0, "SetUp_min": 0, "StdLoss_min": 60, "Break": 90, "TotalWork-LossTime": 570.0, "QtyPlan": "1,140", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายวิทัต วุฒิวิมล", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 1140.0, "CapValue_n": 2.0, "TotalWork_n": 570.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "MachineNorm": "ข้อต่อ-เกลียว", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 570.0, "Availability_pct": 100.0, "Ideal_qty": 1140.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องข้อต่อ", "MachineNo": "ข้อต่อ-ล้าง", "JOB No": "ORW26-00087", "JOB No: ชื่องาน": "ข้อต่อท่อร้อยสายไฟ HDG 2-1/2นิ้ว", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "1,022", "Cap": "CPล้าง_25_s08", "Cap: CapValue": 2.0, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 17:00", "Start-EndPlan": 540.0, "CapValue": 2.0, "SetUp_min": 0, "StdLoss_min": 60, "Break": 60, "TotalWork-LossTime": 420.0, "QtyPlan": "840", "หมายเหตุ": null, "Status": "เดินงานตามปกติ", "EmpRes": "นายรุ่งโรจน์ วามะลุน", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 840.0, "CapValue_n": 2.0, "TotalWork_n": 420.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "MachineNorm": "ข้อต่อ-ล้าง", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 420.0, "Availability_pct": 100.0, "Ideal_qty": 840.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องโค้ง", "MachineNo": "CU_HS05 (ตัดท่อโค้ง)", "JOB No": "ORW26-00105", "JOB No: ชื่องาน": "ท่อโค้ง90' IMC-HDG 2นิ้ว", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "500", "Cap": "CU_ELBOW_20_s08", "Cap: CapValue": 2.0, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 2.0, "SetUp_min": 0, "StdLoss_min": 15, "Break": 90, "TotalWork-LossTime": 615.0, "QtyPlan": "1,230", "หมายเหตุ": "(ไม่เคยจับCapจริง)", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 1230.0, "CapValue_n": 2.0, "TotalWork_n": 615.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "MachineNorm": "CU_HS05", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 615.0, "Availability_pct": 100.0, "Ideal_qty": 1230.0, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}, {"Location": "งานเครื่องโค้ง", "MachineNo": "CH_ELBOW01 (เครื่องลบคมท่อโค้ง)", "JOB No": "ORW26-00081", "JOB No: ชื่องาน": "ท่อโค้ง90' IMC-HDG 1-1/2นิ้ว", "JOB No: ความหนา": null, "JOB No: QtyPlanLines": "220", "Cap": "CH_ELBOW_12_to_20_s08", "Cap: CapValue": 0.5, "Cap: CapUnit": "ชิ้น / นาที", "Cap: SetUp_min": null, "PlanStartDate": "11/05/2026 08:00", "PlanEndDate": "11/05/2026 20:00", "Start-EndPlan": 720.0, "CapValue": 0.5, "SetUp_min": 0, "StdLoss_min": 15, "Break": 90, "TotalWork-LossTime": 615.0, "QtyPlan": "308", "หมายเหตุ": "(ไม่เคยจับCapจริง)", "Status": "เดินงานตามปกติ", "EmpRes": "out source", "EmpRes: email": null, "PlanDate": "2026-05-11", "QtyPlan_n": 308.0, "CapValue_n": 0.5, "TotalWork_n": 615.0, "SetUp_n": 0.0, "CapUnit": "ชิ้น / นาที", "MachineNorm": "CH_ELBOW01", "เลขที่สั่งผลิต": null, "Qty_actual": 0.0, "BD_min": 0.0, "BD_reasons": "", "Operator": "", "Achievement_pct": 0.0, "Run_min": 615.0, "Availability_pct": 100.0, "Ideal_qty": 307.5, "Performance_pct": 0.0, "OEE_pct": null, "Status_calc": "NotStarted"}];
+const MISSING= {"นายเอกภพ ภู่ศรีพงษ์": ["SL_02 / OSE26-00128", "SL_02 / OSE26-00127"], "นายสามารถ ดาสม": ["SL_02 / OSE26-00128", "SL_02 / OSE26-00127"], "นายสุภาพ เม่นแก้ว": ["SL_02 / OSE26-00128", "SL_02 / OSE26-00127"], "นายภูมินทร์ มั่นศักดิ์": ["RF_07 / OFM26-00257"], "นายสงบ การบรรจง": ["RF_07 / OFM26-00257"], "นายภูษิต บัวชุม": ["RF_08 / OFM26-00272"], "นายอุเทน กองสิงห์": ["RF_08 / OFM26-00272"], "นายธัณพิสิฐ น้อมนุช": ["LO_R03 (F3) / OFM26-00227", "LO_R04 (F4) / OFM26-00223"], "นายวิทัต วุฒิวิมล": ["ข้อต่อ-เกลียว / ORW26-00074"], "นายรุ่งโรจน์ วามะลุน": ["ข้อต่อ-ล้าง / ORW26-00087"]};
 document.getElementById('ts').textContent = new Date().toLocaleString('th-TH');
 
 const fmt  = n => (n==null||isNaN(+n))?'—':(+n).toLocaleString('en-US');
 const fmt1 = n => (n==null||isNaN(+n))?'—':(+n).toFixed(1);
-const started = r => (+r.Qty_actual||0) > 0;
+const st   = r  => (+r.Qty_actual||0)>0;
+function pc(p,s){if(!s)return 'none';if(p>=90&&p<=110)return 'ok';if(p>110)return 'over';if(p>=70)return 'warn';return 'bad';}
+function bc(p,s){if(!s)return '';if(p>110)return 'over-c';if(p<70)return 'bad-c';if(p<90)return 'warn-c';return 'ok-c';}
 
-function pillCls(p, st){
-  if(!st) return 'none';
-  if(p>=90&&p<=110) return 'ok';
-  if(p>110)  return 'over';
-  if(p>=70)  return 'warn';
-  return 'bad';
-}
-function barCls(p, st){
-  if(!st) return '';
-  if(p>110)  return 'over-c';
-  if(p<70)   return 'bad-c';
-  if(p<90)   return 'warn-c';
-  return 'ok-c';
-}
+const tPlan=DATA.reduce((a,r)=>a+(+r.QtyPlan_n||0),0);
+const tAct =DATA.reduce((a,r)=>a+(+r.Qty_actual||0),0);
+const stR  =DATA.filter(st);
+const sPlan=stR.reduce((a,r)=>a+(+r.QtyPlan_n||0),0);
+const sAct =stR.reduce((a,r)=>a+(+r.Qty_actual||0),0);
+const bdTot=DATA.reduce((a,r)=>a+(+r['BD_min']||0),0);
+const nBot =DATA.filter(r=>r.Status_calc==='Bottleneck').length;
+const nMiss=Object.keys(MISSING).length;
 
-// ── KPI / EXEC SUMMARY ──────────────────
-const totalPlan = DATA.reduce((a,r)=>a+(+r.QtyPlan_n||0),0);
-const totalAct  = DATA.reduce((a,r)=>a+(+r.Qty_actual||0),0);
-const stRows    = DATA.filter(started);
-const sPlan = stRows.reduce((a,r)=>a+(+r.QtyPlan_n||0),0);
-const sAct  = stRows.reduce((a,r)=>a+(+r.Qty_actual||0),0);
-const ovAll = totalPlan ? totalAct/totalPlan*100 : 0;
-const ovSt  = sPlan ? sAct/sPlan*100 : 0;
-const bdTot = DATA.reduce((a,r)=>a+(+r['BD_min']||0),0);
-const nBot  = DATA.filter(r=>r.Status_calc==='Bottleneck').length;
-const nOT   = DATA.filter(r=>r.Status_calc==='OnTarget').length;
-const nBeh  = DATA.filter(r=>r.Status_calc==='Behind').length;
-const nOvr  = DATA.filter(r=>r.Status_calc==='OverProduction').length;
-const nNS   = DATA.filter(r=>r.Status_calc==='NotStarted').length;
+document.getElementById('exec-g').innerHTML=[
+  {cls:'',  lbl:'Achievement (เริ่มแล้ว)',  val:(sPlan?sAct/sPlan*100:0).toFixed(1)+'%', sub:`${fmt(Math.round(sAct))} / ${fmt(Math.round(sPlan))} เส้น`},
+  {cls:'',  lbl:'ได้เป้า + เกินเป้า',       val:DATA.filter(r=>['OnTarget','OverProduction'].includes(r.Status_calc)).length+' jobs', sub:'Achievement ≥90%'},
+  {cls:'o', lbl:'ใกล้เป้า (70-89%)',         val:DATA.filter(r=>r.Status_calc==='Behind').length+' jobs', sub:'ควรติดตาม'},
+  {cls:'r', lbl:'ตกเป้า (<70%)',             val:nBot+' jobs', sub:'ต้องการตัดสินใจด่วน'},
+  {cls:'b', lbl:'Breakdown รวม',             val:fmt(bdTot)+' นาที', sub:(bdTot/60).toFixed(1)+' ชั่วโมง'},
+  {cls:'p', lbl:'ไม่กรอกรายงาน',             val:nMiss+' คน', sub:'รายละเอียดด้านล่าง'},
+].map(e=>`<div class="ecard ${e.cls}"><div class="el">${e.lbl}</div><div class="ev">${e.val}</div><div class="es">${e.sub}</div></div>`).join('');
 
-const execItems = [
-  {cls:'ok',  lbl:'Achievement (เริ่มแล้ว)', val:ovSt.toFixed(1)+'%',    sub:`${fmt(Math.round(sAct))} / ${fmt(Math.round(sPlan))} เส้น`},
-  {cls:'',    lbl:'Jobs ได้เป้า (≥90%)',      val:nOT+nOvr,               sub:`On-Target ${nOT} + เกินเป้า ${nOvr} jobs`},
-  {cls:'warn',lbl:'Jobs ใกล้เป้า (70-89%)',  val:nBeh,                   sub:'ควรติดตามให้ชิดขึ้น'},
-  {cls:'danger',lbl:'Jobs ตกเป้า (<70%)',   val:nBot,                   sub:'ต้องการการตัดสินใจทันที'},
-  {cls:'blue',lbl:'Breakdown รวม',           val:fmt(bdTot)+' นาที',     sub:(bdTot/60).toFixed(1)+' ชั่วโมง'},
-];
-document.getElementById('exec-grid').innerHTML = execItems.map(e=>`
-  <div class="exec-item ${e.cls}">
-    <div class="exec-label">${e.lbl}</div>
-    <div class="exec-val">${e.val}</div>
-    <div class="exec-sub">${e.sub}</div>
+// missing reporters
+document.getElementById('miss-g').innerHTML=Object.entries(MISSING).map(([emp,jobs])=>`
+  <div class="miss-card">
+    <div class="mn">👤 ${emp}</div>
+    <div class="mj">${jobs.map(j=>`📌 ${j}`).join('<br>')}</div>
+    <span class="tag">ยังไม่บันทึก</span>
   </div>`).join('');
 
-// ── BOTTLENECK CARDS ──────────────────
-const bots = DATA.filter(r=>r.Status_calc==='Bottleneck').sort((a,b)=>(+a.Achievement_pct||0)-(+b.Achievement_pct||0));
+// bottleneck
+const bots=DATA.filter(r=>r.Status_calc==='Bottleneck').sort((a,b)=>(+a.Achievement_pct||0)-(+b.Achievement_pct||0));
 if(bots.length){
   document.getElementById('bot-sec').style.display='';
-  document.getElementById('bot-badge').textContent = bots.length+' job';
-  document.getElementById('bot-cards').innerHTML = bots.map(r=>`
+  document.getElementById('bot-badge').textContent=bots.length+' job';
+  document.getElementById('bot-cards').innerHTML=bots.map(r=>`
     <div class="alert">
       <h3>${r.MachineNo} · ${r['JOB No']}</h3>
-      <div class="ach">${fmt1(r.Achievement_pct)}%</div>
-      <p>
-        <b>${(r['JOB No: ชื่องาน']||'').substring(0,55)}</b><br>
-        Cap: <b>${r.CapValue_n} ${r.CapUnit||''}</b><br>
-        เป้า ${fmt(r.QtyPlan_n)} → จริง ${fmt(r.Qty_actual)} · BD ${fmt(r['BD_min'])} นาที
-        ${r.BD_reasons?`<br>📌 ${r.BD_reasons.substring(0,120)}`:''}
-      </p>
-    </div>`).join('');
+      <div class="av">${fmt1(r.Achievement_pct)}%</div>
+      <p><b>${(r['JOB No: ชื่องาน']||'').substring(0,60)}</b><br>
+      Cap: <b>${r.CapValue_n} ${r.CapUnit||''}</b><br>
+      เป้า ${fmt(r.QtyPlan_n)} → จริง ${fmt(r.Qty_actual)} · BD ${fmt(r['BD_min'])} นาที
+      ${r.BD_reasons?`<br>📌 ${r.BD_reasons.substring(0,120)}`:''}
+      </p></div>`).join('');
 }
 
-// ── JOB TABLE ──────────────────────────
-const STATUS_ORDER = {Bottleneck:0,Behind:1,OnTarget:2,OverProduction:3,NotStarted:4};
-const STATUS_TH = {OnTarget:'🟢 ได้เป้า',Behind:'🟠 ใกล้เป้า',Bottleneck:'🔴 ตกเป้า',OverProduction:'🔵 เกินเป้า',NotStarted:'⬜ ยังไม่บันทึก'};
-const CHIP_LIST = ['ทั้งหมด','OnTarget','Behind','Bottleneck','OverProduction','NotStarted'];
-
-let active = 'ทั้งหมด';
-const chips = document.getElementById('chips');
-chips.innerHTML = CHIP_LIST.map(s=>`<span class="chip${s===active?' act':''}" data-s="${s}">${
-  s==='ทั้งหมด'?`ทั้งหมด (${DATA.length})`:STATUS_TH[s]+` (${DATA.filter(r=>r.Status_calc===s).length})`
-}</span>`).join('');
+// job table
+const SO={Bottleneck:0,Behind:1,OnTarget:2,OverProduction:3,NotStarted:4};
+const STH={OnTarget:'🟢 ได้เป้า',Behind:'🟠 ใกล้เป้า',Bottleneck:'🔴 ตกเป้า',OverProduction:'🔵 เกินเป้า',NotStarted:'⬜ ยังไม่บันทึก'};
+const CL=['ทั้งหมด','OnTarget','Behind','Bottleneck','OverProduction','NotStarted'];
+let active='ทั้งหมด';
+const chips=document.getElementById('chips');
+chips.innerHTML=CL.map(s=>`<span class="chip${s===active?' act':''}" data-s="${s}">${s==='ทั้งหมด'?`ทั้งหมด (${DATA.length})`:STH[s]+` (${DATA.filter(r=>r.Status_calc===s).length})`}</span>`).join('');
 chips.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
-  active=c.dataset.s;
-  chips.querySelectorAll('.chip').forEach(x=>x.classList.toggle('act',x.dataset.s===active));
-  renderJobs();
+  active=c.dataset.s; chips.querySelectorAll('.chip').forEach(x=>x.classList.toggle('act',x.dataset.s===active)); renderJ();
 }));
 
-function renderJobs(){
-  const rows = (active==='ทั้งหมด'?DATA:DATA.filter(r=>r.Status_calc===active))
-    .slice().sort((a,b)=>(STATUS_ORDER[a.Status_calc]||5)-(STATUS_ORDER[b.Status_calc]||5));
+function renderJ(){
+  const rows=(active==='ทั้งหมด'?DATA:DATA.filter(r=>r.Status_calc===active)).slice().sort((a,b)=>(SO[a.Status_calc]||5)-(SO[b.Status_calc]||5));
   document.getElementById('job-badge').textContent=rows.length+' job';
-  const tbl = document.getElementById('jtbl');
-  tbl.innerHTML = `<thead><tr>
-    <th class="left">Loc</th><th class="left">เครื่อง</th><th>Job</th>
-    <th class="left">ผลิตภัณฑ์</th><th>Cap</th><th>หน่วย</th>
-    <th>เวลา(นาที)</th><th>เป้า</th><th>จริง</th>
-    <th style="width:140px">Achievement</th><th>OEE%</th><th>BD(นาที)</th><th>สถานะ</th>
-  </tr></thead>
-  <tbody>${rows.map(r=>{
-    const st = started(r);
-    const p  = +r.Achievement_pct||0;
-    const pc = pillCls(p,st); const bc = barCls(p,st);
-    const rowBg = {Bottleneck:'#FFF5F5',Behind:'#FFFBF5',OnTarget:'#F0FDF4',OverProduction:'#EFF6FF',NotStarted:'#FAFAFA'}[r.Status_calc]||'';
-    return `<tr style="background:${rowBg}">
+  const RBG={Bottleneck:'#FFF5F5',Behind:'#FFFBF5',OnTarget:'#F0FDF4',OverProduction:'#EFF6FF',NotStarted:'#FAFAFA'};
+  document.getElementById('jtbl').innerHTML=`<thead><tr>
+    <th class="l">Loc</th><th class="l">เครื่อง</th><th>Job</th><th class="l">ผลิตภัณฑ์</th>
+    <th>Cap</th><th>หน่วย</th><th>เวลา(นาที)</th><th>เป้า</th><th>จริง</th>
+    <th style="width:140px">Achievement</th><th>OEE%</th><th>BD(นาที)</th><th>สถานะ</th><th class="l">ผู้รับผิดชอบ</th>
+  </tr></thead><tbody>${rows.map(r=>{
+    const s=st(r),p=+r.Achievement_pct||0;
+    return `<tr style="background:${RBG[r.Status_calc]||''}">
       <td>${r.Location||'—'}</td>
       <td><b class="mono" style="font-size:11.5px;color:var(--gd)">${r.MachineNo}</b></td>
-      <td class="mono center" style="font-size:11px">${r['JOB No']}</td>
-      <td style="font-size:11.5px;max-width:220px">${(r['JOB No: ชื่องาน']||'').substring(0,55)}</td>
-      <td class="mono center"><b>${r.CapValue_n}</b></td>
-      <td style="font-size:10.5px;color:var(--grey)">${(r.CapUnit||'').replace('เส้น/นาที','เส้น/นาที').replace('ชิ้น / นาที','ชิ้น/นาที')}</td>
-      <td class="mono right">${fmt(r.TotalWork_n)}</td>
-      <td class="mono right">${fmt(r.QtyPlan_n)}</td>
-      <td class="mono right"><b>${fmt(r.Qty_actual)}</b></td>
-      <td>
-        <div class="bar-wrap">
-          <div class="bar"><div class="bfill ${bc}" style="width:${Math.min(100,p)}%"></div></div>
-          <span class="pill ${pc}">${st?fmt1(p)+'%':'—'}</span>
-        </div>
-      </td>
-      <td class="mono center"><b>${st?fmt1(r.OEE_pct)+'%':'—'}</b></td>
-      <td class="mono right" style="color:${(+r['BD_min']||0)>60?'var(--red)':'inherit'}">${(+r['BD_min']||0)>0?fmt(r['BD_min']):'-'}</td>
-      <td style="font-size:11px">${STATUS_TH[r.Status_calc]||'—'}</td>
-    </tr>`;
-  }).join('')}</tbody>`;
+      <td class="mono cen" style="font-size:11px">${r['JOB No']}</td>
+      <td style="font-size:11px;max-width:200px">${(r['JOB No: ชื่องาน']||'').substring(0,52)}</td>
+      <td class="mono cen"><b>${r.CapValue_n}</b></td>
+      <td style="font-size:10px;color:var(--grey)">${(r.CapUnit||'').replace(' (','<br>(')}</td>
+      <td class="mono r">${fmt(r.TotalWork_n)}</td>
+      <td class="mono r">${fmt(r.QtyPlan_n)}</td>
+      <td class="mono r"><b>${fmt(r.Qty_actual)}</b></td>
+      <td><div class="bar-wrap"><div class="bar"><div class="bf ${bc(p,s)}" style="width:${Math.min(100,p)}%"></div></div><span class="pill ${pc(p,s)}">${s?fmt1(p)+'%':'—'}</span></div></td>
+      <td class="mono cen"><b>${s?fmt1(r.OEE_pct)+'%':'—'}</b></td>
+      <td class="mono r" style="color:${(+r['BD_min']||0)>60?'var(--red)':'inherit'}">${(+r['BD_min']||0)>0?fmt(r['BD_min']):'-'}</td>
+      <td style="font-size:11px">${STH[r.Status_calc]||'—'}</td>
+      <td style="font-size:10.5px;color:var(--ink2);max-width:160px">${r.EmpRes||'out source'}</td>
+    </tr>`;}).join('')}</tbody>`;
 }
-renderJobs();
+renderJ();
 
-// ── BREAKDOWN TABLE ──────────────────
-const bdRows = DATA.filter(r=>(+r['BD_min']||0)>0).sort((a,b)=>b['BD_min']-a['BD_min']);
+// BD table
+const bdRows=DATA.filter(r=>(+r['BD_min']||0)>0).sort((a,b)=>b['BD_min']-a['BD_min']);
 if(bdRows.length){
   document.getElementById('bd-badge').textContent=bdRows.length+' job';
-  document.getElementById('bdtbl').innerHTML=`
-    <thead><tr>
-      <th class="left">เครื่อง</th><th>Job</th><th class="left">ผลิตภัณฑ์</th>
-      <th>Cap (ใช้คำนวน)</th><th>BD (นาที)</th><th>Achievement%</th><th class="left">รายละเอียดสาเหตุ</th>
-    </tr></thead>
-    <tbody>${bdRows.map(r=>`<tr>
-      <td><b class="mono" style="color:var(--gd)">${r.MachineNo}</b></td>
-      <td class="mono center">${r['JOB No']}</td>
-      <td style="font-size:11.5px">${(r['JOB No: ชื่องาน']||'').substring(0,50)}</td>
-      <td class="mono center"><b>${r.CapValue_n}</b> <span style="font-size:10px;color:var(--grey)">${(r.CapUnit||'').substring(0,15)}</span></td>
-      <td class="mono right" style="color:var(--red);font-weight:700">${fmt(r['BD_min'])}</td>
-      <td class="mono center"><span class="pill ${pillCls(+r.Achievement_pct,true)}">${fmt1(r.Achievement_pct)}%</span></td>
-      <td style="font-size:11px;color:#7C2D12;max-width:280px">${r.BD_reasons||'—'}</td>
-    </tr>`).join('')}
-    <tr style="background:var(--gd);color:#fff">
-      <td colspan="3"><b>รวม Breakdown</b></td>
-      <td></td>
-      <td class="mono right"><b>${fmt(bdTot)} นาที</b></td>
-      <td colspan="2">${(bdTot/60).toFixed(1)} ชั่วโมง</td>
-    </tr></tbody>`;
-} else {
-  document.getElementById('bd-sec').style.display='none';
-}
-</script>
-</body>
-</html>
+  document.getElementById('bdtbl').innerHTML=`<thead><tr>
+    <th class="l">เครื่อง</th><th>Job</th><th class="l">ผลิตภัณฑ์</th>
+    <th>Cap(ใช้คำนวน)</th><th>BD(นาที)</th><th>Achievement%</th><th class="l">สาเหตุ</th>
+  </tr></thead><tbody>${bdRows.map(r=>`<tr>
+    <td><b class="mono" style="color:var(--gd)">${r.MachineNo}</b></td>
+    <td class="mono cen">${r['JOB No']}</td>
+    <td style="font-size:11.5px">${(r['JOB No: ชื่องาน']||'').substring(0,50)}</td>
+    <td class="mono cen"><b>${r.CapValue_n}</b> <span style="font-size:10px;color:var(--grey)">${(r.CapUnit||'').substring(0,14)}</span></td>
+    <td class="mono r" style="color:var(--red);font-weight:700">${fmt(r['BD_min'])}</td>
+    <td class="mono cen"><span class="pill ${pc(+r.Achievement_pct,true)}">${fmt1(r.Achievement_pct)}%</span></td>
+    <td style="font-size:11px;color:#7C2D12;max-width:260px">${r.BD_reasons||'—'}</td>
+  </tr>`).join('')}
+  <tr style="background:var(--gd);color:#fff">
+    <td colspan="3"><b>รวม Breakdown</b></td><td></td>
+    <td class="mono r"><b>${fmt(bdTot)} นาที</b></td>
+    <td colspan="2">${(bdTot/60).toFixed(1)} ชั่วโมง</td>
+  </tr></tbody>`;
+}else document.getElementById('bd-sec').style.display='none';
+</script></body></html>
